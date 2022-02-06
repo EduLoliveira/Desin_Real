@@ -1,0 +1,1575 @@
+@font-face {
+    font-family: 'icones';
+    src: url('icones.ttf') format('truetype');
+}
+
+body {
+    background-color: #005b8f;
+    font-family: 'Montserrat', 'icones' ,Helvetica,Arial,Lucida,sans-serif;;
+    color: #FFFFFF;
+} 
+
+header {
+    margin: 0 0 6px;
+}
+    
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #009df8;
+    padding: 8px 16px;
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cabecalho__logo {
+    width: 270px;
+    margin-top: 6%;
+    margin-left: 28%;
+}
+
+.logo__menu i::before {
+    font-family: 'icones';
+    content: "\e904";
+    font-size: 24px;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #009df8;
+    width: 66vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
+}
+
+.menuLateral--ativo { /*comando JavaScript*/
+    left: 0;
+    transition: .25s;
+}
+
+.menu-lateral__logo {
+    width: 132px;
+    align-self: center;
+    padding: 16px;
+}
+
+.menuLateral {
+    height: 64px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: bold; 
+}
+
+.menuLateral__link--ativo {
+    color: #FFFFFF;
+}
+
+.abertura--li .redirecionamentos--li{
+    border-bottom: yellow;
+    display: none;
+}
+
+.texto-titulo {
+    font-size: 28px;
+    margin-top: 3%;
+    margin-left: 19%;
+    font-weight: 600;
+}
+
+.texto-apresentacao {
+    margin-top: 2%;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.texto-apresentacao--continuacao {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.ligueAgora { 
+    color: #ffffff;
+    padding: 10px;
+    border-color: #ba0000;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 30%;
+    font-weight: 700;
+    background-color: #ba0000;
+}
+
+.dedetizacao-img {
+    width: 98%;
+    height: 50%;
+    margin-left: 1%;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.populares {
+    padding: 3rem 2rem;
+}
+
+.populares__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+}
+
+.populares__card {
+    background-color: #0677b8;
+    display: grid;
+    grid-template-areas:
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;
+    grid-template-rows: 173px auto;
+    margin-right: 1rem;
+    width: calc(29% - 2rem);
+    margin-left: 40px;
+}
+
+.populares__card:last-child {
+    margin-right: 0;
+}
+
+.populares__card___imagem {
+    grid-area: card-imagem;
+    height: 100%;
+    width: 60%;
+    margin-left: 42px;
+    margin-top: 2%;
+}
+
+.populares__card___corpo {
+    display: grid;
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;
+    grid-template-areas: 
+        "card-cabecalho"
+        "card-conteudo";
+    grid-template-rows: 50px auto;
+    padding: .75rem;
+    margin-left: 50px;
+}
+
+.card--titulo {
+    color: #fdfdfd;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: -29px;
+    margin-top: 26px;
+}
+
+.card--descricao {
+    color: #fdfdfd;
+    line-height: 1.5;
+    margin: 1rem 0;
+    margin-left: -50px;
+    text-align: justify;
+}
+
+.email--contato {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 19px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 220px) and (max-width: 320px){
+
+    .cabecalho__logo {
+        width: 116.5px;
+        margin-top: 4%;
+        margin-left: 42%;
+    }
+
+    .texto-titulo {
+        font-size: 22px;
+        margin-top: 8%;
+        margin-left: 17%;
+        margin-bottom: 4%;
+        font-weight: 600;
+    }
+
+    .texto-apresentacao {
+        margin-top: 2%;
+        font-size: 17px;
+    }
+
+    .populares__card {
+        background-color: #0677b8;
+        display: grid;
+        grid-template-areas:
+            "card-imagem"
+            "card-corpo";
+        grid-template-columns: 102%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(96% - 2rem);
+        margin-left: 23px;
+    }
+
+    .populares__card___imagem {
+        grid-area: card-imagem;
+        height: 100%;
+        width: 60%;
+        margin-left: 38px;
+        margin-top: 9%;
+    }
+
+    .card--titulo {
+        color: #fdfdfd;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: -30px;
+        margin-top: 30px;
+    }
+
+    /*codigo CSS dedetizacao.html*/
+
+    .texto-dedetizacao {
+        font-size: 28px;
+        margin-left: 22%;
+        margin-top: 30px;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .texto {
+        font-size: 14px;
+        margin-left: -5%;
+        margin-top: 8px;
+    }
+
+    .insetos--img {
+        display: none;
+    }
+
+    .ligue {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 23.5%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligue:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .introducao--apresentacao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Desin-real {
+        font-size: 36px;
+        margin-top: 6%;
+        margin-left: 18%;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .introducao--escrita {
+        background-color: #005b8f;
+        display: grid;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(90% - 2rem);
+        margin-left: 50px;
+    }
+
+    .apresentacao--desinReal {
+        grid-area: card-cabecalho;
+        margin-top: 18px;
+        margin-left: -4%;
+        line-height: 1.4;
+    }
+
+    .apresentacao--desinReal__parteDois {
+        display: grid;
+        grid-area: card-corpo;
+        margin-top: 71px;
+        margin-left: -4%;
+        line-height: 1.4;
+    }
+
+    .servicos {
+        font-size: 15px;
+        color: yellow;
+        font-weight: 800;
+        margin-top: 45px;
+        margin-left: 1.5%;
+    }
+
+    .trabalhos {
+        font-size: 17px;
+        font-weight: 550;
+        line-height: 1.6;
+        margin-left: -4%;
+    }
+
+    .informacoes__servicos {
+        font-size: 21px;
+        color: #ffffff;
+        font-weight: 800;
+        margin-left: 4.5%;
+        margin-top: 9%;
+    }
+
+    .posicionamento--informacoes{
+        margin-top: 33px;
+        margin-left: 18.5%;
+        list-style-type: none;
+    }
+
+    .informacoes {
+        color: black;
+        padding: 10px;
+        border-color: yellow;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        background-color: yellow;
+    }
+
+    .informacoes:hover {
+        transition: 1.5s;
+        font-size: 19px;
+    }
+    
+    .table {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .conteudos {
+        font-size: 18px;
+        font-weight: 800;
+        background-color: yellow;
+        color: #000000;
+        line-height: 1.4;
+    }
+
+    .titulo--table {
+        font-size: 16px;
+        font-weight: 800;
+        background-color: #fdfdfd;
+        color: #000000;
+    }
+
+    .titulo--table__conteudo {
+        font-size: 14px;
+        background-color: #009df8;
+        color: #fdfdfd;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    td, th {
+        border: 3px solid #000000;
+        padding: 4.5px 7.5px;
+    }
+
+    
+    .comeco--copytight {
+        text-align: center;
+        background: linear-gradient(#005b8f, #0677b8);
+    }
+
+    .logo_copyright {
+        margin-top: 10%;
+        width: 30%;
+    }
+
+    .copyright_desinReal {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: -20px;
+        color: #fdfdfd;
+        font-weight: bold;
+    }
+
+    .email--contato {
+        font-size: 16px;
+        padding: 15px;
+        letter-spacing: 2px;
+    }
+
+    .email--contato:active {
+        transition: 0.5ms;
+        color: yellow;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 540px){
+
+    .cabecalho__logo {
+        width: 155px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 44%;
+    }
+
+    .texto-titulo {
+        font-size: 22px;
+        margin-top: 9%;
+        margin-left: 22%;
+        font-weight: 600;
+        margin-bottom: 4%;
+    }
+
+    .texto-apresentacao {
+        margin-top: 2%;
+        font-size: 16px;
+        margin-left: 2%;
+    }
+
+    .texto-apresentacao--continuacao {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-left: 2%;
+    }
+
+    .populares__card {
+        background-color: #0677b8;
+        display: grid;
+        grid-template-areas:
+            "card-imagem"
+            "card-corpo";
+        grid-template-columns: 102%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(88% - 2rem);
+        margin-left: 39px;
+    }
+
+    .populares__card___imagem {
+        grid-area: card-imagem;
+        height: 100%;
+        width: 60%;
+        margin-left: 47px;
+        margin-top: 9%;
+    }
+
+    .card--titulo {
+        color: #fdfdfd;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    /*codigo CSS dedetizacao.html*/
+
+    .texto-dedetizacao {
+        display: flex;
+        justify-content: center;
+        font-size: 34px;
+        margin-top: 30px;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .texto {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+    .insetos--img {
+        display: none;
+    }
+
+    .ligue {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 32%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligue:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .introducao--apresentacao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Desin-real {
+        display: flex;
+        justify-content: center;
+        font-size: 36px;
+        margin-top: 6%;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .introducao--escrita {
+        background-color: #005b8f;
+        display: grid;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(90% - 2rem);
+        margin-left: 50px;
+    }
+
+    .apresentacao--desinReal {
+        grid-area: card-cabecalho;
+        margin-top: 18px;
+        line-height: 1.4;
+        margin-left: -5%;
+    }
+
+    .apresentacao--desinReal__parteDois {
+        display: grid;
+        grid-area: card-corpo;
+        margin-top: 48px;
+        margin-left: -5%;
+        line-height: 1.4;
+    }
+
+    .servicos {
+        font-size: 18px;
+        color: yellow;
+        font-weight: 800;
+        margin-top: 45px;
+    }
+
+    .trabalhos {
+        font-size: 19px;
+        font-weight: 550;
+        line-height: 1.4;
+    }
+
+    .informacoes__servicos {
+        font-size: 19px;
+        color: #ffffff;
+        font-weight: 800;
+        margin-left: 3.5%;
+        margin-top: 9%;
+    }
+
+    .posicionamento--informacoes{
+        margin-top: 33px;
+        margin-left: 24.5%;
+        list-style-type: none;
+    }
+
+    .informacoes {
+        color: black;
+        padding: 10px;
+        border-color: yellow;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        background-color: yellow;
+    }
+
+    .informacoes:hover {
+        transition: 1.5s;
+        font-size: 19px;
+    }
+
+    .table {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .conteudos {
+        font-size: 25px;
+        font-weight: 800;
+        background-color: yellow;
+        color: #000000;
+        line-height: 1.4;
+    }
+
+    .titulo--table {
+        font-size: 19px;
+        font-weight: 800;
+        background-color: #fdfdfd;
+        color: #000000;
+    }
+
+    .titulo--table__conteudo {
+        font-size: 16px;
+        background-color: #009df8;
+        color: #fdfdfd;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    td, th {
+        border: 3px solid #000000;
+        padding: 9px 15px;
+    }
+
+    
+    .comeco--copytight {
+        text-align: center;
+        background: linear-gradient(#005b8f, #0677b8);
+    }
+
+    .logo_copyright {
+        margin-top: 10%;
+        width: 28%;
+    }
+
+    .copyright_desinReal {
+        font-size: 22px;
+        padding: 8px 16px;
+        margin-top: -20px;
+        color: #fdfdfd;
+        font-weight: bold;
+    }
+
+    .email--contato {
+        font-size: 18px;
+        padding: 20px;
+        letter-spacing: 2px;
+    }
+
+    .email--contato:active {
+        transition: 0.5ms;
+        color: yellow;
+        font-size: 21px;
+    }
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 912px){
+
+    .logo__menu i::before {
+        content: "\e904";
+        font-size: 28px;
+        margin-left: 22px;
+    }
+
+    .cabecalho__logo {
+        width: 198.5px;
+        margin-top: 4%;
+        margin-left: 48%;
+    }
+
+    .texto-titulo {
+        font-size: 28px;
+        margin-top: 3%;
+        margin-left: 34%;
+        font-weight: 600;
+    }
+
+    .texto-apresentacao {
+        margin-top: 2%;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-left: 12%;
+    }
+
+    .texto-apresentacao--continuacao {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-left: 12%;
+    }
+
+    .ligueAgora {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 39%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+    
+    /*codigo CSS dedetizacao.html*/
+
+    .texto-dedetizacao {
+        font-size: 34px;
+        margin-left: 68%;
+        margin-top: 30px;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .texto {
+        font-size: 14px;
+        margin-left: 58%;
+        margin-top: 8px;
+    }
+
+    .insetos--img {
+        display: none;
+    }
+
+    .ligue {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 70%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligue:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .introducao--apresentacao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Desin-real {
+        font-size: 36px;
+        margin-top: -13%;
+        margin-left: 20%;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .introducao--escrita {
+        background-color: #005b8f;
+        display: grid;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(56% - 2rem);
+        margin-left: 50px;
+    }
+
+    .apresentacao--desinReal {
+        grid-area: card-cabecalho;
+        margin-top: 18px;
+        line-height: 1.4;
+    }
+
+    .apresentacao--desinReal__parteDois {
+        display: grid;
+        grid-area: card-corpo;
+        margin-top: -35px;
+        line-height: 1.4;
+    }
+
+    .servicos {
+        font-size: 24px;
+        color: yellow;
+        font-weight: 800;
+        margin-left: 2%;
+        margin-top: 45px;
+    }
+
+    .trabalhos {
+        font-size: 19px;
+        font-weight: 550;
+        line-height: 1.4;
+    }
+
+    .informacoes__servicos {
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 800;
+        margin-left: 4.5%;
+        margin-top: 9%;
+    }
+
+    .posicionamento--informacoes{
+        margin-top: 33px;
+        margin-left: 17.5%;
+        list-style-type: none;
+    }
+
+    .informacoes {
+        color: black;
+        padding: 10px;
+        border-color: yellow;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        background-color: yellow;
+    }
+
+    .informacoes:hover {
+        transition: 1.5s;
+        font-size: 19px;
+    }
+
+    .table {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 10%;
+    }
+
+    .conteudos {
+        font-size: 25px;
+        font-weight: 800;
+        background-color: yellow;
+        color: #000000;
+    }
+
+    .titulo--table {
+        font-size: 19px;
+        font-weight: 800;
+        background-color: #fdfdfd;
+        color: #000000;
+    }
+
+    .titulo--table__conteudo {
+        font-size: 16px;
+        background-color: #009df8;
+        color: #fdfdfd;
+        font-weight: 600;
+
+    }
+
+    td, th {
+        border: 3px solid #000000;
+        padding: 9px 15px;
+    }
+
+    
+    .comeco--copytight {
+        text-align: center;
+        background: linear-gradient(#005b8f, #0677b8);
+    }
+
+    .logo_copyright {
+        margin-top: 10%;
+        width: 14%;
+    }
+
+    .copyright_desinReal {
+        font-size: 22px;
+        padding: 8px 16px;
+        margin-top: -20px;
+        color: #fdfdfd;
+        font-weight: bold;
+    }
+
+    .email--contato {
+        font-size: 19px;
+        padding: 20px;
+        letter-spacing: 2px;
+    }
+
+    .email--contato:active {
+        transition: 0.5ms;
+        color: yellow;
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .logo__menu i::before {
+        display: none;
+    }
+
+    .cabecalho {
+        background-color: #009df8;
+        padding: 8px 44px;
+        box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    .cabecalho__logo {
+        width: 34%;
+        margin-left: -7%;
+        margin-top: 1%;
+    }
+
+    .abertura--li .redirecionamentos--li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+        margin-top: -5%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .redirecionamentos--li:hover {
+        color: yellow;
+        border-bottom: 2.5px solid yellow;
+    }
+    
+    .ligueAgora { 
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 45%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligueAgora:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .dedetizacao-img {
+        width: 50%;
+        margin-left: 1%;
+    }
+
+    .texto-titulo {
+        font-size: 30px;
+        margin-left: 40%;
+    }
+
+    .texto-apresentacao {
+        font-size: 18px;
+        margin-left: 27%;
+    }
+
+    .texto-apresentacao--continuacao {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-left: 27%;
+    }
+
+    .dedetizacao-img {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-top: 10%;
+    }
+  
+    .populares {
+        padding: 3rem 2rem;
+    }
+
+    .populares__conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0rem;
+    }
+
+    .populares__card {
+        background-color: #0677b8;
+        display: grid;
+        grid-template-areas: 
+            "card-imagem"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(30% - 2rem);
+        margin-left: 50px;
+    }
+
+    .populares__card:last-child {
+        margin-right: 0;
+    }
+
+    .populares__card___imagem {
+        grid-area: card-imagem;
+        height: 100%;
+        width: 60%;
+        margin-left: 56px;
+        margin-top: 2%;
+    }
+
+    .populares__card___corpo {
+        display: grid;
+        grid-area: card-corpo;
+        grid-row-gap: .5rem;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-conteudo";
+        grid-template-rows: 50px auto;
+        padding: .75rem;
+        margin-left: 50px;
+        gap: .8rem;
+    }
+
+    .card--titulo {
+        color: #fdfdfd;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: 28px;
+        margin-top: 26px;
+    }
+
+    .card--descricao {
+        color: #fdfdfd;
+        line-height: 1.5;
+        margin: 1rem 0;
+        margin-left: -50px;
+        text-align: justify;
+    }
+
+/*codigo CSS dedetizacao.html*/
+
+    .texto-dedetizacao {
+        font-size: 48px;
+        margin-left: 69%;
+        margin-top: 52px;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .texto {
+        font-size: 18px;
+        margin-left: 63%;
+        margin-top: 8px;
+    }
+
+    .insetos--img {
+        margin-left: 64%;
+        width: 30%;
+    }
+
+    .ligue {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 73%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligue:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .introducao--apresentacao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Desin-real {
+        font-size: 36px;
+        margin-top: -32%;
+        margin-left: 23%;
+        font-weight: 600;
+        color: yellow;
+    }
+
+    .introducao--escrita {
+        background-color: #005b8f;
+        display: grid;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(56% - 2rem);
+        margin-left: 50px;
+    }
+
+    .apresentacao--desinReal {
+        grid-area: card-cabecalho;
+        margin-top: 18px;
+        text-align: justify;
+        line-height: 1.4;
+    }
+
+    .apresentacao--desinReal__parteDois {
+        display: grid;
+        grid-area: card-corpo;
+        margin-top: -64px;
+        line-height: 1.4;
+    }
+
+    .servicos {
+        font-size: 28px;
+        color: yellow;
+        font-weight: 800;
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+
+    .trabalhos {
+        font-size: 19px;
+        font-weight: 550;
+        line-height: 1.4;
+    }
+
+    .informacoes__servicos {
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: 800;
+        margin-left: 62.5%;
+        margin-top: -18.5%;
+    }
+
+    .posicionamento--informacoes{
+        margin-top: 22px;
+        margin-left: 73%;
+        list-style-type: none;
+    }
+
+    .informacoes {
+        color: black;
+        padding: 10px;
+        border-color: yellow;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        background-color: yellow;
+    }
+
+    .informacoes:hover {
+        transition: 1.5s;
+        font-size: 19px;
+    }
+
+    .table {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 15%;
+    }
+
+    .conteudos {
+        font-size: 25px;
+        font-weight: 800;
+        background-color: yellow;
+        color: #000000;
+    }
+
+    .titulo--table {
+        font-size: 19px;
+        font-weight: 800;
+        background-color: #fdfdfd;
+        color: #000000;
+    }
+
+    .titulo--table__conteudo {
+        font-size: 16px;
+        background-color: #009df8;
+        color: #fdfdfd;
+        font-weight: 600;
+
+    }
+
+    td, th {
+        border: 3px solid #000000;
+        padding: 9px 15px;
+    }
+
+    
+    .comeco--copytight {
+        text-align: center;
+        background: linear-gradient(#005b8f, #0677b8);
+    }
+
+    .logo_copyright {
+        margin-top: 10%;
+        width: 14%;
+    }
+
+    .copyright_desinReal {
+        font-size: 22px;
+        padding: 8px 16px;
+        margin-top: -20px;
+        color: #fdfdfd;
+        font-weight: bold;
+    }
+
+    .email--contato:hover {
+        transition: 1.2s;
+        color: yellow;
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+
+    .logo__menu i::before {
+        display: none;
+    }
+
+    .cabecalho {
+        background-color: #009df8;
+        padding: 8px 44px;
+        box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    .cabecalho__logo {
+        width: 34%;
+        margin-left: -7%;
+        margin-top: 1%;
+    }
+
+    .abertura--li .redirecionamentos--li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+        margin-top: -5%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .redirecionamentos--li:hover{
+        color: yellow;
+        border-bottom: 2.5px solid yellow;
+    }
+    
+    .ligueAgora { 
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 45%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligueAgora:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .dedetizacao-img {
+        width: 50%;
+        margin-left: 1%;
+    }
+
+    .texto-titulo {
+        font-size: 30px;
+        margin-left: 41%;
+    }
+
+    .texto-apresentacao {
+        font-size: 18px;
+        margin-left: 28%;
+    }
+
+    .texto-apresentacao--continuacao {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-left: 28%;
+    }
+
+    .dedetizacao-img {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-top: 10%;
+    }
+  
+    .populares {
+        padding: 3rem 2rem;
+    }
+
+    .populares__conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0rem;
+    }
+
+    .populares__card {
+        background-color: #0677b8;
+        display: grid;
+        grid-template-areas: 
+            "card-imagem"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(30% - 2rem);
+        margin-left: 50px;
+    }
+
+    .populares__card:last-child {
+        margin-right: 0;
+    }
+
+    .populares__card___imagem {
+        grid-area: card-imagem;
+        height: 100%;
+        width: 60%;
+        margin-left: 56px;
+        margin-top: 2%;
+    }
+
+    .populares__card___corpo {
+        display: grid;
+        grid-area: card-corpo;
+        grid-row-gap: .5rem;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-conteudo";
+        grid-template-rows: 50px auto;
+        padding: .75rem;
+        margin-left: 50px;
+        gap: .8rem;
+    }
+
+    .card--titulo {
+        color: #fdfdfd;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: 28px;
+        margin-top: 26px;
+    }
+
+    .card--descricao {
+        color: #fdfdfd;
+        line-height: 1.5;
+        margin: 1rem 0;
+        margin-left: -50px;
+        text-align: justify;
+    }
+
+/*codigo CSS dedetizacao.html*/
+
+    .texto-dedetizacao {
+        font-size: 48px;
+        margin-left: 69%;
+        margin-top: 52px;
+        color: yellow;
+        font-weight: 600;
+    }
+
+    .texto {
+        font-size: 18px;
+        margin-left: 63%;
+        margin-top: 8px;
+    }
+
+    .insetos--img {
+        margin-left: 64%;
+        width: 30%;
+    }
+
+    .ligue {
+        color: #ffffff;
+        padding: 10px;
+        border-color: #ba0000;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        margin-left: 73%;
+        font-weight: 700;
+        background-color: #ba0000;
+    }
+
+    .ligue:hover {
+        transition: 1s;
+        font-size: 20px;
+    }
+
+    .introducao--apresentacao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .Desin-real {
+        font-size: 36px;
+        margin-top: -28%;
+        margin-left: 23%;
+        font-weight: 600;
+        color: yellow;
+    }
+
+    .introducao--escrita {
+        background-color: #005b8f;
+        display: grid;
+        grid-template-areas: 
+            "card-cabecalho"
+            "card-corpo";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(56% - 2rem);
+        margin-left: 50px;
+    }
+
+    .apresentacao--desinReal {
+        grid-area: card-cabecalho;
+        margin-top: 18px;
+        text-align: justify;
+        line-height: 1.4;
+    }
+
+    .apresentacao--desinReal__parteDois {
+        display: grid;
+        grid-area: card-corpo;
+        margin-top: -64px;
+        line-height: 1.4;
+    }
+
+    .servicos {
+        font-size: 28px;
+        color: yellow;
+        font-weight: 800;
+        margin-left: 2%;
+        margin-top: 0%;
+    }
+
+    .trabalhos {
+        font-size: 19px;
+        font-weight: 550;
+        line-height: 1.4;
+    }
+
+    .informacoes__servicos {
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: 800;
+        margin-left: 62.5%;
+        margin-top: -13.5%;
+    }
+
+    .posicionamento--informacoes{
+        margin-top: 22px;
+        margin-left: 72%;
+        list-style-type: none;
+    }
+
+    .informacoes {
+        color: black;
+        padding: 10px;
+        border-color: yellow;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 800;
+        background-color: yellow;
+    }
+
+    .informacoes:hover {
+        transition: 1.5s;
+        font-size: 19px;
+    }
+
+    .detalhes--servicos {
+        display: flex;
+        font-size: 24px;
+        margin-top: 8%;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    .table {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 25%;
+    }
+
+    .conteudos {
+        font-size: 25px;
+        font-weight: 800;
+        background-color: yellow;
+        color: #000000;
+    }
+
+    .titulo--table {
+        font-size: 19px;
+        font-weight: 800;
+        background-color: #fdfdfd;
+        color: #000000;
+    }
+
+    .titulo--table__conteudo {
+        font-size: 16px;
+        background-color: #009df8;
+        color: #fdfdfd;
+        font-weight: 600;
+
+    }
+
+    td, th {
+        border: 3px solid #000000;
+        padding: 9px 15px;
+    }
+
+    
+    .comeco--copytight {
+        text-align: center;
+        background: linear-gradient(#005b8f, #0677b8);
+    }
+
+    .logo_copyright {
+        margin-top: 10%;
+        width: 14%;
+    }
+
+    .copyright_desinReal {
+        font-size: 22px;
+        padding: 8px 16px;
+        margin-top: -20px;
+        color: #fdfdfd;
+        font-weight: bold;
+    }
+
+    .email--contato:hover {
+        transition: 1.2s;
+        color: yellow;
+        font-size: 21px;
+    }
+}
